@@ -3,11 +3,7 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:web_app/Components/Header.dart';
 import 'package:web_app/constants/constants.dart';
-import 'package:web_app/pages/About.dart';
-import 'package:web_app/pages/Contact.dart';
-import 'package:web_app/pages/HomePage.dart';
 
-import '../Components/buttons/Button1.dart';
 
 class ServicePage extends StatefulWidget {
   const ServicePage({super.key});
@@ -19,21 +15,20 @@ class ServicePage extends StatefulWidget {
 class _ServicePageState extends State<ServicePage> {
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       body: Container(
         color: mainColor,
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.end,
           children: [
-            Header(),
+            Header(page: 'services',),
             Expanded(
-              child: Container(
-                padding: EdgeInsets.symmetric(horizontal: 128, vertical: 38),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-       children: [
-         Center(child: Text('Service Page', style: TextStyle(fontSize: 40),),)
-                  ],
-                ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.end,
+                             children: [
+                      Image(image: AssetImage('../../assets/services.png', ),height: 500,)
+                ],
               ),
             )
           ],

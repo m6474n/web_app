@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
+
 import 'package:web_app/Components/Header.dart';
-import 'package:web_app/pages/About.dart';
-import 'package:web_app/pages/HomePage.dart';
-import 'package:web_app/pages/Services.dart';
+
 
 class ContactPage extends StatefulWidget {
   const ContactPage({super.key});
@@ -16,8 +13,10 @@ class ContactPage extends StatefulWidget {
 class _ContactPageState extends State<ContactPage> {
   @override
   Widget build(BuildContext context) {
+
+
     return Scaffold(
-      body: Column(children: [Header(),
+      body: Column(children: [Header(page: 'contact',),
         Expanded(
           child: Container(
             color: Colors.grey.shade100,
